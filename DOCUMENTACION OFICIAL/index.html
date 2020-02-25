@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,31 @@
     <script type="text/javascript">
         //alert("Hola Mundo con JS");
     </script>
-    <script src="variables_DO.js"></script>
-    
+    <!--<script src="variables_DO.js"></script>-->
+
 </head>
+
 <body>
-    
+
     <h1>Aprendiendo JavaScript</h1>
 
+    <form action="" name="selectForm">
+        <p>
+            <label for="musicTypes">Escoge algún tipo de música y haz click en el botón de abajo</label>
+            <select name="musicTypes" id="musicTypes" multiple="multiple">
+                <option selected="selected">R&B</option>
+                <option value="">Jazz</option>
+                <option value="">Blues</option>
+                <option value="">New Age</option>
+                <option value="">Classical</option>
+                <option value="">Opera</option>
+            </select>
+        </p>
+        <p><input id="btn" type="button" value="Cuál es tus selección?"></p>
+    </form>
+
+    <script src="bucles_iteraciones.js"></script>
+
 </body>
+
 </html>
