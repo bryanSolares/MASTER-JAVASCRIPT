@@ -2,6 +2,8 @@
 var listaUsuarios = document.querySelector("#usuarios");
 var Janet = document.querySelector("#janet");
 
+console.log(decodeURIComponent("https://reqres.in/api/users"));
+
 //debugger;
 obtenerJson("https://reqres.in/api/users")
     .then(data =>
