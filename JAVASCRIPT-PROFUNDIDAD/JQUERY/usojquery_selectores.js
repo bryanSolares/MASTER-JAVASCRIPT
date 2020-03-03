@@ -45,7 +45,22 @@ $(document).ready(function () {
     $('[title="Google"]').css("background","#ccc");
     $("[title='Facebook']").css("background","blue").css("color","white");
 
+    //Otros tipos
+    //$("p,a").addClass("margen-superior");
+    var busqueda = $("#caja").find(".resaltado");
+    var busqueda2 = $("#caja .resaltado");
+    var busqueda3 = $("#caja .resaltado").eq(0).parent().find("[title='Google']");
+    console.log(busqueda);
+    console.log(busqueda2);
+    console.log(busqueda3)
+
 });
+
+
+
+
+
+
 
 jQuery(document).ready(function () {
     console.log("JQUERY cargado");

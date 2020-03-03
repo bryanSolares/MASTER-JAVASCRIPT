@@ -7,11 +7,20 @@
     <title>Aprendiendo JQUERY</title>
 
     <script src="jquery-3.4.1.min.js"></script>
-    <script src="usojquery.js"></script>
+    <script src="usojquery_selectores.js"></script>
 
     <style>
         .grande {
             font-size: 30px;
+        }
+
+        .margen-superior {
+            display: block;
+            margin-top: 45px;
+        }
+
+        .resaltado{
+            border-bottom: 2px solid royalblue;
         }
     </style>
 
@@ -38,6 +47,17 @@
         <li><a href="#" title="Facebook">Enlace 2</a></li>
         <li><a href="#" title="Google">Enlace 3</a></li>
     </ul>
+
+
+    <div id="caja">
+        <p>Hola soy una caja</p>
+        <ul>
+            <li class="resaltado">Elemento 1</li>
+            <li class="resaltado">Elemento 2</li>
+        </ul>
+        <span class="resaltado">Soy un span</span>
+    </div>
+
 
 </body>
 

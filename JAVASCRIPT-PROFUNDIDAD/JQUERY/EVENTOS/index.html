@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <script src="../jquery-3.4.1.min.js"></script>
+    <script src="jquery_eventos.js"></script>
+
+    <style>
+        #caja {
+            width: 250px;
+            height: 250px;
+            border: 2px solid black;
+            background: yellow;
+            transition: all 300ms;
+        }
+        #nombre{
+            padding: 20px;
+
+        }
+        #datos{
+            border: 4px dashed black;
+            padding: 10px;
+            width: 250px;
+            height: 250px;
+            display: none;
+        }
+        #sigueme{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            display: block;
+            background-color: blue;
+            border-radius: 999px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Manejo de Eventos</h1>
+
+    <div id="sigueme">
+
+    </div>
+
+    <div id="caja">Soy una caja</div>
+    <br>
+    <form action="">
+        <input type="text" name="nombre" id="nombre">
+    </form>
+
+    <br>
+    <div id="datos">
+
+    </div>
+</body>
+
+</html>
