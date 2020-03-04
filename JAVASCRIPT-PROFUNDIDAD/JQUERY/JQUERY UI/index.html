@@ -50,10 +50,60 @@
             border: 4px solid green;
         }
 
+        .caja-efectos {
+            background: pink;
+            float: none;
+            display: none;
+        }
+
+        .cuadro-dialogo {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
+
+    <id id="tabs">
+        <ul>
+            <li><a href="#tab1">Pestaña 1</a></li>
+            <li><a href="#tab2">Pestaña 2</a></li>
+            <li><a href="#tab3">Pestaña 3</a></li>
+        </ul>
+        <div id="tab1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sunt eum quos veniam officiis
+            non, voluptatibus obcaecati eveniet veritatis eligendi saepe aspernatur vero mollitia optio dolor porro sit
+            voluptas ipsam.</div>
+        <div id="tab2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam placeat est laboriosam vero
+            reprehenderit animi corrupti beatae eum quisquam doloribus, voluptates quae repellendus atque nulla
+            inventore ullam praesentium molestiae. Assumenda.</div>
+        <div id="tab3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas eaque odio quos corrupti dolorem?
+            Harum repellat eius iusto quis, sint dolorem accusantium ipsam, possimus eos labore iure dolores similique
+            iste!</div>
+    </id>
+
+    <hr>
+    <input type="text" name="calendario" id="calendario">
+
+    <hr>
+    <div id="cuadro-dialogo" title="Cuadro de Dialogo Cool">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates totam reprehenderit blanditiis culpa
+            quaerat veniam, illo nesciunt, quam accusamus eos vel. Deserunt fuga molestias magnam dicta, maxime neque
+            accusamus. Dolorum.
+        </p>
+    </div>
+    <button id="lanzame">
+        Lanzar PopUp
+    </button>
+    <hr>
+    <a href="www.google.com" title="Acceder" id="datos">Datos Google</a>
+    <hr>
+    <button id="mostrar">
+        Mostrar
+    </button>
+
+    <div class="caja-efectos elemento">
+
+    </div>
 
     <div id="elemento-movible">
 
