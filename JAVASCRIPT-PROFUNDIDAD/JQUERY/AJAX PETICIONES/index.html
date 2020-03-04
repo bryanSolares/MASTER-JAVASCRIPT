@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peticiones Ajax</title>
+    <script src="../INTRODUCCION/jquery-3.4.1.min.js"></script>
+    <script src="peticiones_ajax.js"></script>
+</head>
+<body>
+
+    <h1>Peticiones con AJAX</h1>
+
+    <div id="datos">
+
+    </div>
+
+    <form action="https://reqres.in/api/users" method="post" id="formulario">
+        Nombre:<input type="text" name="nombre" id="nombre">
+        <br>
+        Web:<input type="text" name="web" id="web">
+        <br>
+        <input type="submit" value="Enviar Datos">
+    </form>
+    
+</body>
+</html>

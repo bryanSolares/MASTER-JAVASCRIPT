@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTILIZANDO JQUERY UI</title>
+    <script src="../INTRODUCCION/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.theme.min.css">
+    <script src="../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="jquery-ui.js"></script>
+
+    <style>
+        .elemento {
+            width: 300px;
+            height: 200px;
+            border: 4px solid black;
+            background-color: lightblue;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .selected-list li {
+            width: 80%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            list-style: none;
+            cursor: pointer;
+        }
+
+        ul .ui-selecting {
+            background: green;
+        }
+
+        ul .ui-selected {
+            background: blue;
+        }
+
+        #elemento-movible {
+            width: 100px;
+            height: 100px;
+            border: 4px solid red;
+        }
+
+        #area {
+            width: 300px;
+            height: 300px;
+            border: 4px solid green;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="elemento-movible">
+
+    </div>
+
+    <div id="area">
+
+    </div>
+
+    <ul class="selected-list">
+        <li>GTA 5</li>
+        <li>NEED FOR SPEED</li>
+        <li>CALL OF DUTY</li>
+        <li>FIFA</li>
+        <li>CRASH BAND</li>
+    </ul>
+
+    <div class="elemento">Hola soy un Elemento 1</div>
+
+    <div class="elemento">Hola soy un Elemento 2</div>
+
+    <div class="elemento">Hola soy un Elemento 3</div>
+
+
+
+</body>
+
+</html>
