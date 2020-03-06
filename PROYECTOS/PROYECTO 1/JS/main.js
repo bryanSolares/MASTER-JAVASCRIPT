@@ -152,4 +152,21 @@ $(document).ready(() => {
         location.reload();
     });
 
+    $("#acordeon").accordion();
+
+    setInterval(() => {
+        var timer = moment().format("h:mm:ss");
+        $("#timer").html(timer);
+    }, 1000);
+
+    $("form input[name='fecha_nac']").datepicker({
+        dateFormat: "dd-mm-yy"
+    });
+
+    $.validate({
+        lang: "es",
+        errorMessagePosition: "top",
+        scrollTopOnError: true
+    });
+
 });

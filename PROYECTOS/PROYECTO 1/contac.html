@@ -12,6 +12,13 @@
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.min.css">
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"> </script>
+
     <script src="JS/main.js"></script>
 </head>
 
@@ -53,8 +60,29 @@
 
         <section id="content">
 
-            <div id="posts">
-                
+            <div id="box">
+                <h2>Contacto</h2>
+                <form action="" method="POST" id="form-contact" class="form-login">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" data-validation="alphanumeric">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" name="apellidos" id="apellidos" data-validation="alphanumeric">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" data-validation="email">
+                    <label for="sexo">Sexo</label>
+                    <select name="sexo" id="sexo" data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="woman">Mujer</option>
+                    </select>
+                    <label for="fecha_nac">Fecha
+                        Nacimiento</label>
+                    <input type="text" name="fecha_nac" id="fecha_nac" data-validation="date"
+                        data-validation-format="dd-mm-yyyy">
+                    <label for="edad">Edad</label>
+                    <input type="number" name="edad" id="edad" data-validation="number">
+
+                    <input type="submit" value="Enviar">
+                </form>
             </div>
 
             <aside id="aside">

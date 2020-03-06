@@ -1,16 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.clear-fix{
+.clear-fix {
     float: none;
     clear: both;
 }
 
 
-#global{
+#global {
     width: 65%;
     margin: 0 auto;
     margin-top: 30px;
@@ -19,7 +19,7 @@
     box-shadow: 0 0 2px #ccc;
 }
 
-#logo{
+#logo {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
     letter-spacing: 4px;
@@ -32,7 +32,7 @@
     text-transform: uppercase;
 }
 
-#menu{
+#menu {
     margin-top: 20px;
     font-family: Helvetica, Arial, Helvetica, sans-serif;
     background: #333;
@@ -41,18 +41,18 @@
     margin-bottom: 20px;
 }
 
-#menu ul{
+#menu ul {
     line-height: 46px;
     list-style: none;
 }
 
-.menu-item{
+.menu-item {
     line-height: 46px;
     display: inline-block;
     transition: all 300ms;
 }
 
-.item-link{
+.item-link {
     display: block;
     color: white;
     text-decoration: none;
@@ -60,35 +60,35 @@
     padding-right: 30px;
 }
 
-#posts{
+#posts {
     width: 60%;
     float: left;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.post-title{
+.post-title {
     font-size: 30px;
     color: #333;
 }
 
-.post{
+.post {
     padding: 8px;
 }
 
-.post .post-date{
+.post .post-date {
     display: block;
     color: gray;
     margin-top: 5px;
 }
 
-.post .post-block{
+.post .post-block {
     margin-top: 20px;
     margin-bottom: 20px;
     line-height: 20px;
     text-align: justify;
 }
 
-.button-more{
+.button-more {
     margin-bottom: 20px;
     padding: 15px;
     color: white;
@@ -100,29 +100,32 @@
     text-align: center;
 }
 
-#aside{
+#aside {
     font-family: helvetica, arial, sans-serif;
     width: 31%;
     float: right;
 }
 
-#back-title{
+#back-title {
     background: white;
     padding: 5px;
 }
 
-#aside img{
+#aside img {
     width: 100%;
 }
 
-.about-block{
+.about-block {
     font-size: 15px;
     text-align: justify;
 }
 
-#form-login input[type="text"],
-#form-login input[type="email"],
-#form-login input[type="password"]{
+.form-login input[type="text"],
+.form-login input[type="email"],
+.form-login input[type="password"],
+.form-login input[type="number"],
+.form-login input[type="date"],
+select{
     padding: 5px;
     border-radius: 2px;
     border: 1px solid #ccc;
@@ -132,7 +135,7 @@
     margin-top: 5px;
 }
 
-#form-login input[type="submit"]{
+.form-login input[type="submit"] {
     background: #eee;
     padding: 10px;
     border: 1px solid #ccc;
@@ -141,7 +144,7 @@
 }
 
 
-.title-div{
+.title-div {
     margin-top: 50px;
     margin-bottom: 20px;
     text-align: center;
@@ -150,8 +153,8 @@
     background: url("../img/lines.png") repeat-x;
 }
 
-#footer{
-    background: rgba(51,51,51,0.70);
+#footer {
+    background: rgba(51, 51, 51, 0.70);
     color: white;
     font-family: helvetica, arial;
     height: 47px;
@@ -165,46 +168,82 @@
 }
 
 .bx-wrapper,
-.bx-viewport{
-    height: 250px!important;
+.bx-viewport {
+    height: 250px !important;
 }
 
-#selector-theme{
+#selector-theme {
     position: fixed;
     top: 45%;
-    background: rgba(51,51,51,0.50);
+    background: rgba(51, 51, 51, 0.50);
     width: 50px;
     height: 100px;
 }
 
 #button-green,
 #button-red,
-#button-blue{
+#button-blue {
     width: 25px;
     height: 25px;
     border: 1px solid white;
     display: block;
     margin: 0 auto;
     margin-top: 5px;
-    margin-bottom: 5px;    
+    margin-bottom: 5px;
     cursor: pointer;
 }
 
-#button-green{
+#button-green {
     background: url("../img/hojas.jpg");
 }
 
-#button-red{
+#button-red {
     background: url("../img/rojo.jpg");
 }
 
-#button-blue{
+#button-blue {
     background: url("../img/cielo.jpg");
 }
 
-.up{
+.up {
     color: white;
     text-decoration: none;
     float: right;
     display: block;
+}
+
+#box {
+    width: 60%;
+    float: left;
+    margin-top: 40px;
+}
+
+#timer {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: helvetica, arial;
+    color: #333;
+    border: 5px dashed #333;
+    width: 30%;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+#form-contact{
+    margin-top: 15px;
+    width: 60%;
+}
+
+#form-contact label{
+    width: 100%;
+    font-family: helvetica, arial;
+    display: block;
+}
+
+.form-error{
+    font-size: 11px;
+    background: red;
+    color: white;
+    padding: 10px;
+    width: 100%;
 }
