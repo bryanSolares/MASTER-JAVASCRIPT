@@ -21,6 +21,18 @@ class Vehiculo {
 
 }
 
+//Decorador
+function agregarTurbo(tipoTurbo: String) {
+    return function (target: Function) {
+        target.prototype.agregandoTurbo = function (): void{
+            console.log(`Se ha agregado el turbo tipo: ${tipoTurbo} al Vehiculo`);
+        }
+    }
+}
+
+
+//Agregando decorador
+@agregarTurbo("2T Máxima aceleración")
 class Toyota extends Vehiculo {
 
     public otraFuncionalidad(): string {
@@ -40,4 +52,5 @@ var miAuto = new Toyota(4, "Hilux", 10);
 miAuto.otraFuncionalidad();
 miAuto.toString();
 miAuto.aumentarVelocidad();
+miAuto.agregandoTurbo();
 
