@@ -4,11 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Proyecto 1</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-=======
     <title>PROYECTO 1</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <link id="theme" rel="stylesheet" href="CSS/green.css">
@@ -17,17 +12,18 @@
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
->>>>>>> b91607dde480ef129358163be96c2ed866f754ce
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.min.css">
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"> </script>
+
     <script src="JS/main.js"></script>
 </head>
 
 <body>
 
-<<<<<<< HEAD
-    <section id="global">
-        <header>
-
-=======
     <div id="selector-theme">
         <div id="button-green"></div>
         <div id="button-red"></div>
@@ -36,20 +32,10 @@
 
     <section id="global">
         <header>
->>>>>>> b91607dde480ef129358163be96c2ed866f754ce
             <div id="logo">
                 PROYECTO JS
             </div>
 
-<<<<<<< HEAD
-            <div class="clear-fix"></div>
-            <nav>
-                <ul id="menu">
-                    <li><a href="#">INICIO</a></li>
-                    <li><a href="#">RELOJ</a></li>
-                    <li><a href="#">CONTACTO</a></li>
-                    <li><a href="#">SOBRE MI</a></li>
-=======
             <div class="clear-fix">
 
             </div>
@@ -60,30 +46,11 @@
                     <li class="menu-item"><a href="timer.html" class="item-link">RELOJ</a></li>
                     <li class="menu-item"><a href="about.html" class="item-link">SOBRE MI</a></li>
                     <li class="menu-item"><a href="contac.html" class="item-link">CONTACTO</a></li>
->>>>>>> b91607dde480ef129358163be96c2ed866f754ce
                 </ul>
             </nav>
         </header>
 
         <div id="slider">
-<<<<<<< HEAD
-
-        </div>
-
-        <section id="content">
-            <div id="posts">
-                <article class="post">
-                    <h2>TITULO ARTICULO</h2>
-                    <span>Fecha publicación</span>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum reprehenderit nam esse placeat
-                        illum sequi aperiam nemo ea dolorem quod obcaecati ex, non doloribus sunt nostrum rem odio
-                        magnam provident.</p>
-                </article>
-            </div>
-            <sidebar id="sidebar">
-
-            </sidebar>
-=======
             <div class="bxslider">
                 <div><img src="./img/hojas.jpg" title="Hojas"></div>
                 <div><img src="./img/rojo.jpg" title="Rojo"></div>
@@ -93,8 +60,29 @@
 
         <section id="content">
 
-            <div id="posts">
-                
+            <div id="box">
+                <h2>Contacto</h2>
+                <form action="" method="POST" id="form-contact" class="form-login">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" data-validation="alphanumeric">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" name="apellidos" id="apellidos" data-validation="alphanumeric">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" data-validation="email">
+                    <label for="sexo">Sexo</label>
+                    <select name="sexo" id="sexo" data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="woman">Mujer</option>
+                    </select>
+                    <label for="fecha_nac">Fecha
+                        Nacimiento</label>
+                    <input type="text" name="fecha_nac" id="fecha_nac" data-validation="date"
+                        data-validation-format="dd-mm-yyyy">
+                    <label for="edad">Edad</label>
+                    <input type="number" name="edad" id="edad" data-validation="number">
+
+                    <input type="submit" value="Enviar">
+                </form>
             </div>
 
             <aside id="aside">
@@ -127,20 +115,13 @@
 
             <div class="clear-fix"></div>
 
->>>>>>> b91607dde480ef129358163be96c2ed866f754ce
         </section>
 
     </section>
 
-<<<<<<< HEAD
-    <footer>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa suscipit cum praesentium impedit eveniet
-        excepturi nulla. &copy;
-=======
     <footer id="footer">
         Hecho por Bryan Solares &copy;
         <a href="#" class="up">Ir al Inicio</a>
->>>>>>> b91607dde480ef129358163be96c2ed866f754ce
     </footer>
 
 </body>

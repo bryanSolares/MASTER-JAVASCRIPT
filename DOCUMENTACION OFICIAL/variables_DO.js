@@ -101,3 +101,15 @@ imprimir("\u2839");
 function imprimir(valor){
     console.log(valor);
 }
+
+
+/*CONSTANTES*/
+
+const nombreApellidos = {nombre: "Bryan"};
+nombreApellidos.apellido = "Solares";
+console.log(nombreApellidos.nombre,nombreApellidos.apellido);
+
+/*CONSTANTES PERMANTES: mantener objetos o arrays congelados para las propiedad u objetos no puedan mutar*/
+const  nuevoObjeto = Object.freeze(nombreApellidos);
+console.log(nuevoObjeto);
+
