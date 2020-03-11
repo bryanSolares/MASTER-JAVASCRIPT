@@ -1,7 +1,23 @@
-<h2>{{title}} </h2>
+<h2>{{ title }}</h2>
+
+<p>Compra las Zapatillas de las mejores marcas</p>
+<ul>
+  <li *ngFor="let marca of listaMarcas">
+    <a href="#">
+      <strong>{{ marca }}</strong></a
+    >
+  </li>
+</ul>
 
 <ul>
-    <li>Zapatilla 1</li>
-    <li>Zapatilla 2</li>
-    <li>Zapatilla 3</li>
+  <li *ngFor="let elemento of lista">
+    {{ elemento.nombre }} -- <strong>Q.{{ elemento.precio }}.00</strong>
+    <span
+      *ngIf="elemento.precio <= 80"
+      [style.background]="elemento.precio < 80 ? 'green' : 'blue'"
+      [style.color]="elemento.precio < 80 ? 'white' : 'black'"
+    >
+      !!!En oferta</span
+    >
+  </li>
 </ul>

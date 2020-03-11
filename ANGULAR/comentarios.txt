@@ -1,0 +1,8 @@
+ngOnInit = se ejecuta despues del contructor
+Docheck = se ejecuta cada vez que produce en cambio en un componente o en la aplicación angular
+OnDestroy = se ejecuta antes de eliminar la instancia de un componente}
+/*********/
+Modelo de datos: clase con propiedades que representan a una entidad
+
+Directiva: funcionalidad que se tiene dentro de las plantillas
+direcitas de control, directivas de bucles, directivas de propiedades
