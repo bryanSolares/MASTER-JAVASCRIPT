@@ -9,9 +9,13 @@ export class ZapatillasComponent implements OnInit {
   public title: string;
   public lista: Array<Zapatilla>;
   public listaMarcas: String[];
+  public color : string;
+  public miMarca:string;
 
   constructor() {
     this.listaMarcas = new Array();
+    this.miMarca ="";
+    this.color = "orange";
     this.lista = [
       new Zapatilla("zapatilla 1", 123, "marca 1", "color 1", false),
       new Zapatilla("zapatilla 2", 234, "marca 2", "color 2", true),
@@ -38,4 +42,26 @@ export class ZapatillasComponent implements OnInit {
  
     console.log(this.listaMarcas);
   }
+
+  getMarca(){
+    alert(this.miMarca);
+  }
+
+  addMarca(){
+    this.listaMarcas.push(this.miMarca);
+  }
+
+  borrarMarca(indice){
+    //delete this.listaMarcas[indice];
+    this.listaMarcas.splice(indice,1);
+  }
+
+  onBlur(){
+    console.log("has salido del input");
+  }
+
+  keyUp(){
+    
+  }
+
 }

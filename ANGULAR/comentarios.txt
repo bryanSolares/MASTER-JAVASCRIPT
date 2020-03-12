@@ -6,3 +6,18 @@ Modelo de datos: clase con propiedades que representan a una entidad
 
 Directiva: funcionalidad que se tiene dentro de las plantillas
 direcitas de control, directivas de bucles, directivas de propiedades
+
+
+DIRECTIVAS DE ESTRUCTURA
+
+*ngIf
+*ngFor
+[ngSwitch]="propiedad"
+    *ngSwitchCase="'condicion'"
+
+/***********/
+BINDING
+[(ngModel)]="miMarca" 
+(blur)="onBlur()" 
+(keyup.enter)="keyUp()"
+(click)="addMarca()"
