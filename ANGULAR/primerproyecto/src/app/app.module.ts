@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { appRoutingProvider, routing } from "./app.routing";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VideoJuegoComponent } from "./videojuego/videojuego.component";
 import { ZapatillasComponent } from "./zapatillas/zapatillas.component";
 import { CursosComponent } from './cursos/cursos.component';
+import { HomeComponent } from './home/home.component';
 
 //decorador que permite configurar el módulo
 @NgModule({
@@ -15,16 +17,20 @@ import { CursosComponent } from './cursos/cursos.component';
     AppComponent,
     VideoJuegoComponent,
     ZapatillasComponent,
-    CursosComponent
+    CursosComponent,
+    HomeComponent
   ],
   //modulos propios de angular
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
   //Cargar servicios
-  providers: [],
+  providers: [
+    appRoutingProvider
+  ],
   //componente principal
   bootstrap: [AppComponent]
 })

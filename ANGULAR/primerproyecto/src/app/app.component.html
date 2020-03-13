@@ -298,6 +298,7 @@
   }
 </style>
 
+
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <img
@@ -368,6 +369,16 @@
     </a>
 
   </div>
+
+  <nav>
+    <ul>
+      <a [routerLink]="['/home']" [routerLinkActive]="['active']">HOME</a>
+      <a [routerLink]="['/zapatillas']" [routerLinkActive]="['active']"> ZAPATILLAS </a>
+      <a [routerLink]="['/cursos']" [routerLinkActive]="['active']"> CURSOS </a>
+      <a [routerLink]="['/videojuego']" [routerLinkActive]="['active']"> VIDEOJUEGO </a>
+    </ul>
+  </nav>
+  
 
   <!-- Next Steps -->
   <h2>Next Steps</h2>
@@ -537,8 +548,9 @@
 <button (click)="ocultarVideoJuegos(false)" *ngIf="mostrar_videojuegos">Ocultar</button>
 <button (click)="ocultarVideoJuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar</button>
 
-<videojuego *ngIf="mostrar_videojuegos"></videojuego>
+<!--<videojuego *ngIf="mostrar_videojuegos"></videojuego>-->
 
-<zapatillas></zapatillas>
+<!--<zapatillas></zapatillas>-->
+
 
 <app-cursos></app-cursos>
