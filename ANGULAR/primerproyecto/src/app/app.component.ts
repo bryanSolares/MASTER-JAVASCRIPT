@@ -13,6 +13,7 @@ import { configuracion } from "./models/configuracion";
 //se exporta la clase para poder utilizarla
 export class AppComponent {
   public title = 'Mi primer proyectos -------- ';
+  public users :string[] = ["bryan","josue","solares"];
   public descripcion :string;
   public mostrar_videojuegos : boolean = true;
   public config;
