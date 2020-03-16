@@ -1,3 +1,5 @@
+//Uno de los Hooks más importantes es el componente OnInit
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,6 +11,7 @@ export class CursosComponent implements OnInit {
 
   constructor() { }
 
+  //Método que se ejecuta al cargar el componente
   ngOnInit(): void {
   }
 

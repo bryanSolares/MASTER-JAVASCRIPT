@@ -1,0 +1,92 @@
+<ul>
+    <li><a [routerLink]="['/']" routerLinkActive="router-link-active">Home</a></li>
+    <li><a [routerLink]="['/about']" routerLinkActive="router-link-active">About</a></li>
+</ul>
+
+<router-outlet></router-outlet>
+
+
+<div class="hello-world">
+  <h1>{{ title }}</h1>
+  <h2>{{ name }}</h2>
+
+  <h1>Forma manual, llamada de variable de clase</h1>
+  <div>
+    <ul>
+      <li>{{ users[0] }}</li>
+      <li>{{ users[1] }}</li>
+      <li>{{ users[2] }}</li>
+      <li>{{ users[3] }}</li>
+    </ul>
+  </div>
+  <h1>Forma de Bucle</h1>
+  <ul>
+    <li *ngFor="let item of users">{{ item }}</li>
+  </ul>
+
+  <h1>Usando condicionales</h1>
+  <p *ngIf="obtenerEstado">Activado</p>
+
+  <h1>Enviado parametro a otro componente</h1>
+  <ul>
+    <app-user *ngFor="let item of users" [nameUser]="item"></app-user>
+  </ul>
+
+  <div>
+    <p>nombre: {{ name }}</p>
+    <p>edad: {{ age }}</p>
+    <p>direccion: {{ address.calle }} {{ address.ciudad }}</p>
+    <ul>
+      <li *ngFor="let item of hobbies">Hobbies: {{ item }}</li>
+    </ul>
+  </div>
+
+  <h1>Manejo de Eventos</h1>
+
+  <form (submit)="agregarUsuario(nuevoUsuario)">
+    <!--agregando referencia para obtener lo que está dentro del input-->
+    <input type="text" #nuevoUsuario />
+    <button>Agregar Usuario</button>
+  </form>
+
+  <div>
+    <ul>
+      <li *ngFor="let item of users">
+        <button (click)="diciendoHola()">Decir Hola {{ item }}</button>
+      </li>
+    </ul>
+
+    <h2>Eliminar Usuario</h2>
+    <ul>
+      <li *ngFor="let item of users">
+        {{ item }}
+        <button (click)="eliminarUsuario(item)">X</button>
+      </li>
+    </ul>
+  </div>
+
+  <h2>Binding (doble enlace de datos)</h2>
+  <div>
+    <form>
+      Nombre
+      <input type="text" name="name" id="name" [(ngModel)]="name" />
+      <br />
+      Edad
+      <input type="text" name="age" id="age" [(ngModel)]="age" />
+    </form>
+
+    name: {{ name }}
+    <br />
+    age: {{ age }}
+  </div>
+
+  <hr>
+
+  <h2>Usando servicios</h2>
+  <div>
+      <div *ngFor="let item of post">
+        <h3> {{item.title}} </h3>
+        <p>{{item.body}}</p>
+      </div>
+  </div>
+</div>

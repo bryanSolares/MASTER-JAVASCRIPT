@@ -1,0 +1,33 @@
+ngOnInit = se ejecuta despues del contructor
+Docheck = se ejecuta cada vez que produce en cambio en un componente o en la aplicación angular
+OnDestroy = se ejecuta antes de eliminar la instancia de un componente}
+/*********/
+Modelo de datos: clase con propiedades que representan a una entidad
+
+Directiva: funcionalidad que se tiene dentro de las plantillas
+direcitas de control, directivas de bucles, directivas de propiedades
+
+
+DIRECTIVAS DE ESTRUCTURA
+
+*ngIf
+*ngFor
+[ngSwitch]="propiedad"
+    *ngSwitchCase="'condicion'"
+
+/***********/
+BINDING
+[(ngModel)]="miMarca" 
+(blur)="onBlur()" 
+(keyup.enter)="keyUp()"
+(click)="addMarca()"
+[class.altoPrecio]="elemento.precio >= 80"
+[ngClass]="{
+              'fondoRojo': elemento.precio > 100,
+              'subrayado': elemento.marca == 'NIKE'}"
+
+/************************/
+RUTAS
+1. <base href="/"> -> IMPORTANTE EN INDEX.HTML
+2. archivo app.routing.ts en raiz app del proyecto
+[routerLink]="['/']"
