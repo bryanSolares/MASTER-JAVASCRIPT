@@ -15,7 +15,7 @@ ALTER TABLE users
 
 DESCRIBE users;
 
----
+
 
 CREATE TABLE links(
     id INT(11) NOT NULL,
