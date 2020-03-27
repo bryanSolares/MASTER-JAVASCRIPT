@@ -23,7 +23,6 @@ passport.use("local.singin", new LocalStrategy({
     }
 }));
 
-
 passport.use("local.singup", new LocalStrategy({
     usernameField: "username",
     passwordField: "password",
