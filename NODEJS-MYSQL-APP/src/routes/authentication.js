@@ -1,7 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
+<<<<<<< HEAD
 const {isLoggedIn, isNotLoggedIn} = require("../lib/auth")
+=======
+const {
+    isLoggedIn, isNotLoggedIn
+} = require("../lib/auth")
+>>>>>>> 9ba79bcd36dfce8cc4b662ea5fb4ae32de639657
 
 router.get("/singup", isNotLoggedIn, (req, res) => {
     res.render("auth/singup")
