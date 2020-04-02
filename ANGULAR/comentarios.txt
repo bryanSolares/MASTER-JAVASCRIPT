@@ -31,3 +31,5 @@ RUTAS
 1. <base href="/"> -> IMPORTANTE EN INDEX.HTML
 2. archivo app.routing.ts en raiz app del proyecto
 [routerLink]="['/']"
+
+/******PARAMETROS CON URL*********/
