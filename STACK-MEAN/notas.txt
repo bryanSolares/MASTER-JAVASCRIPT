@@ -1,0 +1,18 @@
+1. MONGO ES UNA BASE DE DATOS NO RELACIONAL
+2. LA RELACIÓN ES MEDIANTE INDICES
+3. SE UTILIZA JAVASCRIPT PARA TODO
+4. NO SE TIENEN TABLAS, SE TIENEN COLECCIONES QUE TIENEN DOCUMENTOS BSON (BINARI JSON)
+5. ES MUY SENCILLA
+6. SENCILLEZ / VELOCIDAD / ESQUEMAS LIBRES
+7. Las colecciones se graban en esquema json
+
+COMANDOS MONGO
+show dbs -> muestra las bases de datos 
+use nombredb -> crear y usa la base de datos indicada
+db.bookmarks.save({json}) -> agregar un nuevo registro
+db.bookmarks.find() -> muestra los registros
+db.bookmarks.find().pretty() -> muestra los registros ordenados como Json
+
+connect-multiparty: dependencia para subir archivos (no recomendada)
+
+
