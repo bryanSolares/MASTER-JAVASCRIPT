@@ -1,67 +1,64 @@
-import { Component, OnInit } from "@angular/core";
-import { Zapatilla } from "../models/zapatilla";
+import { Component, OnInit } from '@angular/core';
+import { Zapatilla } from '../models/zapatilla';
+import { ZapatillaService } from '../services/zapatilla.service';
 
 @Component({
-  selector: "zapatillas",
-  templateUrl: "./zapatillas.component.html"
+	selector: 'zapatillas',
+	templateUrl: './zapatillas.component.html',
+	providers: [ZapatillaService]
 })
-export class ZapatillasComponent implements OnInit {
-  public title: string;
-  public lista: Array<Zapatilla>;
-  public listaMarcas: String[];
-  public color : string;
-  public miMarca:string;
+export class ZapatillasComponent implements OnInit{
+	public titulo: string = "Componente de zapatillas";
+	public zapatillas: Array<Zapatilla>;
+	public marcas: String[];
+	public color: string;
+	public mi_marca: string;
 
-  constructor() {
-    this.listaMarcas = new Array();
-    this.miMarca ="";
-    this.color = "orange";
-    this.lista = [
-      new Zapatilla("zapatilla 1", 123, "marca 1", "color 1", false),
-      new Zapatilla("zapatilla 2", 234, "marca 2", "color 2", true),
-      new Zapatilla("zapatilla 1", 12, "marca 3", "color 1", false),
-      new Zapatilla("zapatilla 2", 23, "marca 2", "color 2", true),
-      new Zapatilla("zapatilla 1", 123, "marca 1", "color 1", false),
-      new Zapatilla("zapatilla 2", 23, "marca 2", "color 2", true),
-      new Zapatilla("zapatilla 1", 12, "marca 1", "color 1", false),
-      new Zapatilla("zapatilla 2", 23, "marca 2", "color 2", true)
-    ];
-  }
+	constructor(
+		private _zapatillaService: ZapatillaService
+	){
+		this.mi_marca = "Fila";
+		this.color = 'blue';
+		this.marcas = new Array();
+	}
 
-  ngOnInit() {
-    console.log(this.lista);
-    this.marcas();
-  }
+	ngOnInit(){
+		this.zapatillas = this._zapatillaService.getZapatillas();
+		//alert(this._zapatillaService.getTexto());
 
-  marcas() {
-    this.lista.forEach(elemento => {
-      if(this.listaMarcas.indexOf(elemento.marca) < 0){
-        this.listaMarcas.push(elemento.marca);
-      }
-    });
- 
-    console.log(this.listaMarcas);
-  }
+		this.getMarcas();
+	}
 
-  getMarca(){
-    alert(this.miMarca);
-  }
+	getMarcas(){
+		this.zapatillas.forEach((zapatilla, index) =>{
+			
+			if(this.marcas.indexOf(zapatilla.marca) < 0){
+				this.marcas.push(zapatilla.marca);
+			}
+			
+		});
 
-  addMarca(){
-    this.listaMarcas.push(this.miMarca);
-  }
+		console.log(this.marcas);
+	}
 
-  borrarMarca(indice){
-    //delete this.listaMarcas[indice];
-    this.listaMarcas.splice(indice,1);
-  }
+	getMarca(){
+		alert(this.mi_marca);
+	}
 
-  onBlur(){
-    console.log("has salido del input");
-  }
+	addMarca(){
+		this.marcas.push(this.mi_marca);
+	}
 
-  keyUp(){
-    
-  }
+	borrarMarca(index){
+		// delete this.marcas[index];
+		this.marcas.splice(index, 1);
+	}
 
+	onBlur(){
+		console.log("Has salido del input");
+	}
+
+	mostrarPalabra(){
+		alert(this.mi_marca);
+	}
 }

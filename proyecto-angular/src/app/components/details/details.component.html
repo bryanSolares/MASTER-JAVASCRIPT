@@ -1,0 +1,13 @@
+<div class="container" *ngIf="project">
+    <div class="card mb-3">
+        <img src="{{url+'project/get-image/'+project.image}}" class="card-img-top" alt="Image Project">
+        <div class="card-body">
+            <h2 class="card-title">NAME: {{project.name}} </h2>
+            <h3 class="card-title">CATEGORY: {{project.category}} </h3>
+            <h4 class="card-title">LANGS: {{project.langs}} </h4>
+            <p class="card-text">DESCRIPCION: {{project.description}} </p>
+            <button [routerLink]="['/editar-proyecto',project._id]" class="btn btn-warning">Edit Project</button>
+            <button (click)="deleteProject(project._id)" class="btn btn-danger">Delete project</button>
+        </div>
+    </div>
+</div>

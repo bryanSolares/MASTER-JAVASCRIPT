@@ -1,0 +1,18 @@
+<h1>Projects</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm" *ngFor="let project of projects">
+            <div class="card mt-3 text-center" style="width: 15rem;">
+                <img src="{{url+'project/get-image/'+project.image}}" class="card-img-top" alt="Project" *ngIf="project.image">
+                <div class="card-header">
+                    <h5 class="card-title">{{project.name}} </h5>
+                </div>
+                <div class="card-body">
+                    <!--<p class="card-text">{{project.description}} </p>-->
+                    <p class="card-text">{{project.category}} </p>
+                    <a [routerLink]="['/proyecto-detalle',project._id]"  class="btn btn-primary btn-block">Go details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

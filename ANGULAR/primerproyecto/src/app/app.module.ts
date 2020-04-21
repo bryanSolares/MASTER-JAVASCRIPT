@@ -1,57 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from "@angular/forms";
-import { appRoutingProvider, routing } from "./app.routing";
-import { HttpClientModule } from "@angular/common/http";
-import { RouterModule, Route } from "@angular/router";
+import { FormsModule } from '@angular/forms';
+import { routing, appRoutingProviders } from './app.routing';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-//importaciones de clases
-import { VideoJuegoComponent } from "./videojuego/videojuego.component";
-import { ZapatillasComponent } from "./zapatillas/zapatillas.component";
+import { VideojuegoComponent } from './videojuego/videojuego.component';
+import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
-import { HolaMundoComponent } from './hola-mundo/hola-mundo.component';
-import { UserComponent } from './user/user.component';
+import { ExternoComponent } from './externo/externo.component';
 
-import { DataService } from "./data.service";
-import { AboutComponent } from './about/about.component';
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
+import { ContactoComponent } from './contacto/contacto.component';
 
-const routes: Route[] = [
-  {path:"", component: HolaMundoComponent},
-  {path:"about", component: AboutComponent}
-];
-
-//módulo principal de angular
 @NgModule({
-  //Carga componenetes, pipes, directivas que la aplicación de angular puede usar
   declarations: [
     AppComponent,
-    VideoJuegoComponent,
+    VideojuegoComponent,
     ZapatillasComponent,
     CursosComponent,
     HomeComponent,
-    HolaMundoComponent,
-    UserComponent
+    ExternoComponent,
+    CalculadoraPipe,
+    ContactoComponent
   ],
-  //modulos propios de angular
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     routing,
-    HttpClientModule,
-    RouterModule.forRoot(routes)
+    HttpClientModule
   ],
-  //Cargar servicios
   providers: [
-    appRoutingProvider,
-    DataService
+    appRoutingProviders
   ],
-  //componente principal
   bootstrap: [AppComponent]
 })
-
-//se exporta el módulo
 export class AppModule { }

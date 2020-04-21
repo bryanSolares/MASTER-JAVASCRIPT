@@ -1,0 +1,50 @@
+<div class="container" *ngIf="project">
+
+    <div *ngIf="status" class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+        <strong>Felicidades! </strong> Ha creado un proyecto de manera exitosa
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="col-sm-8 offset-2">
+        <h2 class="text-center">{{title}}</h2>
+        <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+            <div class="form-group">
+                <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" class="form-control"
+                    placeholder="Name" required>
+                <small *ngIf="name.touched && !name.valid" class="badge badge-danger text-wrap">Requerido</small>
+            </div>
+
+            <div class="form-group">
+                <textarea name="description" #description="ngModel" [(ngModel)]="project.description" rows="10"
+                    class="form-control" required></textarea>
+                <small *ngIf="description.touched && !description.valid"
+                    class="badge badge-danger text-wrap">Requerido</small>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category"
+                    class="form-control" placeholder="Category" required>
+                <small *ngIf="category.touched && !category.valid"
+                    class="badge badge-danger text-wrap">Requerido</small>
+            </div>
+
+            <div class="form-group">
+                <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year" class="form-control"
+                    placeholder="Year" required>
+                <small *ngIf="year.touched && !year.valid" class="badge badge-danger text-wrap">Requerido</small>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" class="form-control"
+                    placeholder="Languajes" required>
+                <small *ngIf="langs.touched && !langs.valid" class="badge badge-danger text-wrap">Requerido</small>
+            </div>
+            <div class="form-group">
+                <input type="file" name="image" class="form-control-file" (change)="fileChangeEvent($event)" placeholder="Upload Image">
+            </div>
+            <input type="submit" class="btn btn-success" value="Send Data" [disabled]="!projectForm.form.valid">
+        </form>
+    </div>
+</div>
